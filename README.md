@@ -1,5 +1,2 @@
-#version 1.0
+Welcome to kawhiGuo.github.io!
 
-#github.io创建
-
-#github pages实现
