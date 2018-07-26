@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化t</title>
+	<style>
+		* {
+			margin:0;
+			padding: 0;
+		}
+
+		.container {
+			margin-bottom: 20px;
+		}
+		h1 {
+			height:40px;
+			line-height: 40px;
+			font-size: 20px;
+		}
+		.clearfix:after {
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		.clearfix {
+			*zoom: 1;
+		}
+		/* float */
+		
+		.left, .right {
+			height: 100px;
+		}
+		.left {
+			width: 300px;
+			float:left;
+			background-color: blue;
+		}
+		.right {
+			margin-left:300px;
+			background-color: red;
+		}
+
+		/* position */
+		.left-2{
+			width:300px;
+			background-color: blue;
+			position: absolute;
+			left:0;
+			top: 160px ;
+		}
+
+		.right-2 {
+			position: absolute;
+			top: 160px;
+			left: 300px;
+			min-width: 100px;
+			width: calc(100% - 300px);
+			background-color: red;
+
+		}
+		.left-2,
+		.right-2 {
+			height: 100px;
+		}
+
+		/* flex */
+		.flex {
+			display: -webkit-flex;
+			display: flex;
+			margin-top: 160px;
+		}
+
+		.left-3{
+			flex-basis: 300px;
+			background-color: blue;
+		}
+
+		.right-3 {
+			flex-grow: 1;
+			background-color: red;
+		}
+		.left3,
+		.right-3 {
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h2>分别尝试使用Float、Position或者Flexbox来实现需求</h2>
+	<!-- float -->
+	<div class="container clearfix">
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+
+	<!-- position -->
+	<div class="container clearfix">
+		<div class="left-2">left</div>
+		<div class="right-2">right</div>
+	</div>
+
+	<!-- flex -->
+	<div class="container clearfix flex">
+		<div class="left-3">left</div>
+		<div class="right-3">right</div>
+	</div>
+</body>
+</html>
