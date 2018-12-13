@@ -2,9 +2,118 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>test</title>
+	<title>简历</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 18px;
+            font-family: "Microsoft Yahei", sans serif;
+        }
+
+        .container {
+            overflow: hidden;
+            zoom: 1;
+        }
+
+        h2 {
+            float:left;
+            width: 195px;
+            padding-top: 60px;
+            padding-bottom: 10000px;
+            margin-bottom: -10000px;
+            font-size: 34px;	
+            text-align: center;
+            color: #fff;
+            background-color: #69a6f7;
+        }
+
+        .resume-box {
+            margin-left: 195px;
+            background-color: #fff;
+            padding-left: 24px;
+            box-sizing: border-box;
+            padding-bottom: 10000px;
+            margin-bottom:-10000px;
+        }
+
+        .resume-concact a {
+            margin-right: 30px;
+         }
+
+        h3 {
+            height:85px;
+            line-height: 85px;
+            font-size: 28px;
+        }
+
+         strong {
+            margin-right: 10px;
+            font-size: 18px
+         }
+
+         span {
+            margin-right: 30px;
+         }
+         p {
+            margin-bottom: 10px;
+         }
+    </style>
 </head>
 <body>
-	hello world!
+	<div class="container">
+		<h2>简历</h2>
+		<div class="resume-box">
+			<div class="resume-info clearfix">
+				<h3>基本信息</h3>
+				<div class="resume-item">
+					<strong>姓名</strong><span>郭康勋</span>
+					<strong>性别</strong><span>男</span>
+					<strong>应聘职位</strong><span>web前端工程师</span>
+				</div>
+			</div>
+			
+			<div class="resume-concact clearfix">
+				<h3>联系方式</h3>
+				<div class="resume-item">
+					<strong>手机</strong><span>13631407021</span>
+					<strong>Email</strong><a href="#"> guokangxun@163.com</a>
+					<strong>个人主页</strong><a href="https://github.com/kawhiGuo">Github</a>
+				</div>
+			</div>
+			
+			<div class="resume-ability clearfix">
+				<h3>能力描述</h3>
+				<div class="resume-item">
+					<h4>技术能力</h4>
+					<p>熟练掌握HTML,CSS,JavaScript,Sass,Jquery,webpack</p>
+					<h4>综合能力</h4>
+					<p>主动积极，努力勤奋</p>
+				</div>
+			</div>
+
+			<div class="resume-education clearfix">
+				<h3>教育经历</h3>
+				<div class="resume-item">
+					<h4>本科</h4>
+					<p>广东药科大学</p>
+				</div>
+			</div>
+
+			<div class="resume-project clearfix">
+				<h3>项目经历</h3>
+				<div class="resume-item">
+					<h4>聚电运营管理后台</h4>
+					<p>作为前端工程师角色参与页面开发</p>
+					<h4>充电桩微信公众号页面</h4>
+					<p>参与微信公众号html5页面编写</p>
+				</div>
+			</div>
+		</div>			
+	</div>	
 </body>
 </html>

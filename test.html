@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平和垂直居中的方法</title>
+	<style>
+		h1 {
+			text-align: center;
+		}
+		.way1 {
+			text-align: center;
+		}
+		.way2 {
+			width: 500px;
+			margin: 0 auto;
+		}
+
+		.way3 {
+			display: inline;
+		}
+
+		.way3-parent{
+			text-align: center;
+		}
+
+		.way4-parent {
+			float: left;
+			position: relative;
+			left: 50%;
+		}
+		.way4 {
+			position: relative;
+			left: -50%;
+			overflow: hidden;
+		}
+
+		.way5-parent {
+			margin: 0 auto;
+			clear:both;
+		}
+
+		/* 
+		 * @params 垂直居中
+		 */
+
+		.vetical-way {
+			width: 500px;
+			margin: 0 auto;
+			border: 1px solid #888;
+			height: 30px;
+			line-height:  30px;
+		}
+
+		.vertical-manyLine-parent {
+			margin: 0 auto;
+		}
+		.vertical-manyLine {
+			height: 40px;
+			font-size: 12px;
+		}
+		
+		.vertical-manyLine-way2 {
+			height: 150px;
+			border: 1px solid red;
+			display: table-cell;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>水平居中</h1>
+	<div class="way1"><span>行内元素水平居中方法：父类设置text-align: center</span></div>
+	
+	<div class="way2">块级元素的水平居中（方法一） 定宽： margin:0 auto</div>
+
+	<div class="way3-parent">
+		<div class="way3">块级元素的水平居中（方法二） 不定宽： 设置display为inline，然后父元素设置text-align:center</div>
+	</div>
+
+	<div class="way4-parent">
+		<p class="way4">块级元素的水平居中（方法三)：<br>父元素设置float:left ; position:relative; left: 50%; 元素自身设置position:relative;left: -50%</p>
+	</div>
+
+	
+	<table class="way5-parent">
+		<tbody>
+			<tr>
+				<td>
+					<div class="way5">
+						块级元素的水平居中（方法四) :利用table的td，然后设置table的margin:0 auto;
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h1 style="clear:both">垂直居中</h1>
+
+	<div class="vetical-way">父元素高度确定的单行文本： 设置行高和高度一致</div>
+	
+	<table class="vertical-manyLine-parent">
+		<tbody>
+			<tr>
+				<td>
+					<div class="vertical-manyLine">
+						<p>父元素高度确认的多行文本垂直居中：把元素放在table的td里面</p>
+						<p>父元素高度确认的多行文本垂直居中：把元素放在table的td里面</p>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="vertical-manyLine-way2">
+		<p>父元素高度确认的多行文本垂直居中</p>
+		<p>方法二:设置display:table-cell再设置vertical-align:middle</p>
+	</div>	
+</body>
+</html>

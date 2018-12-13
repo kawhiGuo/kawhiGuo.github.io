@@ -1,0 +1,168 @@
+html,body,div,ul,li,h1,h2,h3,h4,h5,p,input,a {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei",sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+/*  header模块 */
+.header {
+	width: 100%;
+	height: 42px;
+	color: #fff;
+	background-color: #333;
+}
+
+.header-content {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header-content p{
+	float: left;
+	height: 42px;
+	line-height: 42px;
+	font-size: 16px;
+}
+.header-link {
+	float: right;
+}
+.header-link li {
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.header-link li  a{
+	font-size: 12px;
+	color: #fff;
+}
+
+/* banner */
+.banner {
+	width: 100%;
+	height:160px;
+	background-color: #69b93d;
+}
+.banner-box {
+	position: relative;
+	width: 960px;
+	height: 160px;
+	margin:0 auto;
+}
+.banner-number {
+	position: absolute;
+	right: 0;
+	bottom:5px;
+}
+.banner-number li {
+	display: inline-block;
+	padding: 6px 5px;
+	border: 1px solid #5da735;
+	color: #345d1f;
+	font-size: 12px;
+	background-color: #b3dc9c;
+}
+.banner-number li:active,
+.banner-number li:hover {
+	background-color: #e0f0d7;
+	padding-top:12px;
+	cursor: pointer;
+	color: #14250c;
+}
+
+/* 菜单导航menu */
+.menu {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #e4e4e4;
+	box-sizing: border-box;
+}
+
+.menu .nav {
+	width: 960px;
+	margin: 5px auto 0;
+}
+
+.nav li {
+	float: left;
+	padding: 10px 15px;
+	border: 1px solid #e2e2e2;
+	font-size: 12px;
+	line-height:12px;
+	border-radius: 15px 15px 0 0;
+	background-color: #eee;
+	border-collapse: collapse;
+	cursor: pointer;
+}
+.nav li.active{
+	background-color: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+/* .nav-content */
+.nav-content {
+	width: 960px;
+	margin: 5px auto 10px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.nav-item {
+	flex-basis: 100%;
+	display: flex;
+	margin-bottom: 4px;
+}
+
+.nav-item div {
+	border: 1px solid #dedede;
+	height: 94px;
+	line-height: 94px;
+	text-align: center;
+	margin-right: 4px;
+	flex:1;
+	font-size: 12px; 
+}
+
+
+.nav-item:nth-child(1) div:last-child,
+.nav-item:nth-child(2) div:last-child,
+.nav-item:nth-child(3) div:last-child {
+	margin-right: 0; 
+}
+
+/* footer */ 
+.footer{
+	width: 100%;
+	height: 64px;
+	padding-top: 12px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: #666;
+	color: #fff;
+}
+
+.footer p {
+	font-size: 12px;
+}
