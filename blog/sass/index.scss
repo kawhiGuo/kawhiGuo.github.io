@@ -1,0 +1,109 @@
+@import "compass/reset";
+
+@function px2rem($px) {
+	$rem: 37.5px;
+	@return ($px / $rem) + rem;
+}
+
+
+body  {
+	background: #f5f5f5;
+}
+
+ul{
+	list-type-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+$white: #fff;
+
+.rem-box {
+	overflow: hidden;
+}
+
+.rem-banner {
+	width: 100%;
+	margin: 0 auto;
+	img {
+		width: 100%;
+		height: px2rem(345px);
+	}
+}
+
+.rem-btn {
+	width:100%;
+	margin: 50px auto;
+	text-align: center;
+	img {
+		width: px2rem(258px);
+		height: px2rem(65px);
+	}
+}
+.rem-nav {
+	width: 100%;
+	padding: 0 px2rem(50px);
+	height: px2rem(49px);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	box-sizing: border-box;
+	 ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: px2rem(49px);
+		li{
+			cursor: pointer;
+			a {
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+				.nav-icon {
+					display:block;
+					width: px2rem(23px);
+					height: px2rem(23px);
+					background-repeat: no-repeat;
+					background-size: px2rem(23px) px2rem(23px);
+				}
+				.nav-find {
+					background-image: url(../img/find@2x.png);
+				}
+				.nav-avatar{
+					background-image: url(../img/avatar@2x.png);
+				}
+				.nav-home {
+					background-image: url(../img/home@2x.png);
+				}
+				span {
+					display:block;
+					width: 100%;
+					margin-top: px2rem(4px);
+					font-size: px2rem(12px);
+					color: #666;
+					text-align:center;
+				}
+			}
+			&.active {
+				.nav-find {
+					background-image: url(../img/find-active@2x.png);
+				}
+				.nav-avatar{
+					background-image: url(../img/avatar-active@2x.png);
+				}
+				.nav-home {
+					background-image: url(../img/home-active@2x.png);
+				}
+				span {
+					color: #f35950;
+				}
+			}
+		}
+	}
+	
+}
+
+

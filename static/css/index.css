@@ -1,0 +1,156 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@media (-webkit-min-device-pixel-radio: 2), (min-device-pixel-radio: 2) {
+  body {
+    background: red;
+  }
+}
+body {
+  background: #f5f5f5;
+}
+
+ul {
+  list-type-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.rem-box {
+  overflow: hidden;
+}
+
+.rem-banner {
+  width: 100%;
+  margin: 0 auto;
+}
+.rem-banner img {
+  width: 100%;
+  height: 9.2rem;
+}
+
+.rem-btn {
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+}
+.rem-btn img {
+  width: 6.88rem;
+  height: 1.73333rem;
+}
+
+.rem-nav {
+  width: 100%;
+  padding: 0 1.33333rem;
+  height: 1.30667rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  box-sizing: border-box;
+}
+.rem-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.30667rem;
+}
+.rem-nav ul li {
+  cursor: pointer;
+}
+.rem-nav ul li a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.rem-nav ul li a .nav-icon {
+  display: block;
+  width: 0.61333rem;
+  height: 0.61333rem;
+  background-repeat: no-repeat;
+  background-size: 0.61333rem 0.61333rem;
+}
+.rem-nav ul li a .nav-find {
+  background-image: url(../img/find@2x.png);
+}
+.rem-nav ul li a .nav-avatar {
+  background-image: url(../img/avatar@2x.png);
+}
+.rem-nav ul li a .nav-home {
+  background-image: url(../img/home@2x.png);
+}
+.rem-nav ul li a span {
+  display: block;
+  width: 100%;
+  margin-top: 0.10667rem;
+  font-size: 0.32rem;
+  color: #666;
+  text-align: center;
+}
+.rem-nav ul li.active .nav-find {
+  background-image: url(../img/find-active@2x.png);
+}
+.rem-nav ul li.active .nav-avatar {
+  background-image: url(../img/avatar-active@2x.png);
+}
+.rem-nav ul li.active .nav-home {
+  background-image: url(../img/home-active@2x.png);
+}
+.rem-nav ul li.active span {
+  color: #f35950;
+}
