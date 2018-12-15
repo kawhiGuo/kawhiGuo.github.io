@@ -1,119 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>简历</title>
+    <meta charset="UTF-8">
+    <title>登录注册</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css">
     <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
+    /*小圆点样式*/
+    #fp-nav ul li, .fp-slidesNav ul li {
+        display: block;
+        width: 14px;
+        height: 13px;
+        margin: 15px 0;
+        position: relative;
+    }
+    #fp-nav ul li a span, .fp-slidesNav ul li a span{
+        position: absolute;
+        z-index: 1;
+        /*border: 0;*/
+        background: #DDDDDD;
+        left: 50%;
+        top: 50%;
+        height: 12px;
+        width: 12px;
+        transition: width 2s;
+        /*border: 4px solid #f95e58;*/
+    }
 
-        body {
-            font-size: 18px;
-            font-family: "Microsoft Yahei", sans serif;
-        }
+    #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+        height: 12px;
+        width: 12px;
+        margin: -6px 0 0 -6px;
+        border-radius: 100%;
+        border: 4px solid #C4E0FF;
+        background-color: #2382EA;
+        /*  -webkit-transform: translateX(-4px);
+          -moz-transform: translateX(-4px);
+          -ms-transform: translateX(-4px);
+          transform: translateX(-4px);*/
+    }
+    #fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span{
+        height: 12px;
+        width: 12px;
+        margin: -6px 0 0 -6px;
+        border-radius: 100%;
+        border: 4px solid #C4E0FF;
+        background-color: #2382EA;
+    }
+    /*箭头上下跳动*/
+    @-webkit-keyframes bounce-down {
+        25% {-webkit-transform: translateY(-10px);}
+        50%, 100% {-webkit-transform: translateY(0);}
+        75% {-webkit-transform: translateY(10px);}
+    }
 
-        .container {
-            overflow: hidden;
-            zoom: 1;
-        }
+    @keyframes bounce-down {
+        25% {transform: translateY(-10px);}
+        50%, 100% {transform: translateY(0);}
+        75% {transform: translateY(10px);}
+    }
 
-        h2 {
-            float:left;
-            width: 195px;
-            padding-top: 60px;
-            padding-bottom: 10000px;
-            margin-bottom: -10000px;
-            font-size: 34px;	
-            text-align: center;
-            color: #fff;
-            background-color: #69a6f7;
-        }
+    .animate-bounce-down{
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        z-index: 996;
+        width: 30px;
+        height: 30px;
+        -webkit-animation: bounce-down 2s linear infinite;
+        animation: bounce-down 2s linear infinite;
+    }
+    /*头条样式*/
+    .header {
+        /* -webkit-transform: translateY(-80px);
+         -moz-transform: translateY(-80px);
+         -ms-transform: translateY(-80px);
+         transform: translateY(-80px);
+         -webkit-transition: -webkit-transform .3s;
+         transition: -webkit-transform .3s;
+         -moz-transition: transform .3s,-moz-transform .3s;
+         transition: transform .3s;
+         transition: transform .3s,-webkit-transform .3s,-moz-transform .3s;
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         background: #fff;
+         z-index: 3;
+         height: 76px;
+         width: 100%;
+         -webkit-box-shadow: 0 1px 10px hsla(0,7%,56%,.08);
+         -moz-box-shadow: 0 1px 10px hsla(0,7%,56%,.08);
+         box-shadow: 0 1px 10px hsla(0,7%,56%,.08);*/
 
-        .resume-box {
-            margin-left: 195px;
-            background-color: #fff;
-            padding-left: 24px;
-            box-sizing: border-box;
-            padding-bottom: 10000px;
-            margin-bottom:-10000px;
-        }
+        background: #ffffff;
+        z-index: 3;
+        height: 80px;
+        width: 100%;
+        -webkit-box-shadow: 15px 0px 38px rgba(132,152,179,0.21);
+        -moz-box-shadow: 15px 0px 38px rgba(132,152,179,0.21);
+        box-shadow:15px 0px 38px rgba(132,152,179,0.21);
 
-        .resume-concact a {
-            margin-right: 30px;
-         }
 
-        h3 {
-            height:85px;
-            line-height: 85px;
-            font-size: 28px;
-        }
+        transition: transform .3s,
+        -webkit-transform .3s,
+        -moz-transform .3s;
+        transform: translateY(-80px);
 
-         strong {
-            margin-right: 10px;
-            font-size: 18px
-         }
+    }
+    .show-header {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .header .logo_left {
+        position: absolute;
+        left: 38px;
+        top: 22px;
+        height: 43px;
+        width: 166px;
+        display:  none;
+    }
+    .header .btn-wrapper {
+        position: absolute;
+        bottom: 15px;
+        right: 40px;
+    }
+    .header .btn-wrapper .register {
+        background-color: #fff;
+        border: 1px solid #2382EA;
+        color: #2382EA;
+    }
+    .header .btn-wrapper .login {
+        background-color: #2382EA;
+        color: #fff;
+    }
+    .header .btn-wrapper .btn {
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 120px;
+        height: 50px;
+        /**/
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        margin-left: 10px;
+        line-height: 50px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        text-align: center;
+        font-size: 16px;
+    }
+    /*第6屏*/
+    .six{
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/6.1@3x.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .six .only-logo{
+        z-index: 6;
+        height: 43px;
+        width: 166px;
+        position: absolute;
+        left: 99px;
+        top: 38px;
+    }
+    .six .text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        text-align: center;
+    }
+    .six .text .btn-wrapper {
+        padding-top: 50px;
+    }
+    .six .text .btn-wrapper .register {
+        background-color: #fff;
+        border: 1px solid #2382EA;
+        color: #2382EA;
+    }
+    .six .text .btn-wrapper .login {
+        background-color: #2382EA;
+        color: #fff;
+    }
+    .six .text .btn-wrapper .btn {
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 150px;
+        height: 50px;
+        /**/
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        margin-left: 30px;
+        line-height: 50px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        text-align: center;
+        font-size: 16px;
+    }
+    .six .text .text-p{
+        font-size:36px;
+        font-family:MicrosoftYaHei-Bold;
+        color:rgba(63,68,76,1);
+        padding-top: 28px;
+        margin: 0;
+        font-weight: bold;
+    }
+    .six .text .text-p-last{
+        font-size:24px;
+        font-family:MicrosoftYaHei;
+        color:rgba(102,102,102,1);
+        padding-top: 28px;
+        margin: 0;
+    }
+    .border{
+        border: 1px solid red;
+    }
+    .re{
+        position: relative;
+    }
+    .inline{
+        display: inline-block;
+    }
+    /*第5屏幕*/
+    .five{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/5.1@3x.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .five  .five-img{
+        width:627px;
+        height:406px;
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/5.2@3x.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .five .five-text{
+        height:413px;
+        margin-left: 123px;
+        display: flex;
+        flex-flow: nowrap column;
+        justify-content: center;
+    }
+    .five .five-text .p1{
+        font-size:36px;
+        font-family:MicrosoftYaHei-Bold;
+        color:rgba(63,68,76,1);
+        font-weight: bold;
+    }
+    .five .five-text .p2{
+        font-size:24px;
+        font-family:MicrosoftYaHei;
+        color:rgba(102,102,102,1);
+    }
+    .five .five-text p{
+        margin: 0;
+        padding-bottom: 30px;
+    }
+    /*第四屏幕*/
+    .four{
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/4.1@3x.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .four .four-text{
+        height:413px;
+        /*margin-left: 123px;*/
+        display: flex;
+        flex-flow: nowrap column;
+        justify-content: center;
+    }
+    .four .four-text .p1{
+        font-size:36px;
+        font-family:MicrosoftYaHei-Bold;
+        color:rgba(63,68,76,1);
+        font-weight: bold;
+    }
+    .four .four-text .p2{
+        font-size:24px;
+        font-family:MicrosoftYaHei;
+        color:rgba(102,102,102,1);
+    }
+    .four .four-text p{
+        margin: 0;
+        padding-bottom: 28px;
+    }
+    .four .four-img{
+        width:524px;
+        height:333px;
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/4.2@3x.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 84px;
+    }
+    /*第三屏幕*/
+    .three{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/3.1@3x.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .three .three-img{
+        width:556px;
+        height:355px;
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/3.2@3x.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .three .three-text{
+        height:413px;
+        margin-left: 123px;
+        display: flex;
+        flex-flow: nowrap column;
+        justify-content: center;
+    }
+    .three .three-text .p1{
+        font-size:36px;
+        font-family:MicrosoftYaHei-Bold;
+        color:rgba(63,68,76,1);
+        font-weight: bold;
+    }
+    .three .three-text .p2{
+        font-size:24px;
+        font-family:MicrosoftYaHei;
+        color:rgba(102,102,102,1);
+    }
+    .three .three-text p{
+        margin: 0;
+        padding-bottom: 28px;
+    }
+    /*第2屏幕*/
+    .two{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/2.1@3x.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .two .two-img{
+        width:571px;
+        height:478px;
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/2.2@3x.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 84px;
+    }
+    .two .two-text{
+        height:413px;
+        /*margin-left: 123px;*/
+        display: flex;
+        flex-flow: nowrap column;
+        justify-content: center;
+    }
+    .two .two-text .p1{
+        font-size:36px;
+        font-family:MicrosoftYaHei-Bold;
+        color:rgba(63,68,76,1);
+        font-weight: bold;
+    }
+    .two .two-text .p2{
+        font-size:24px;
+        font-family:MicrosoftYaHei;
+        color:rgba(102,102,102,1);
+    }
+    .two .two-text p{
+        margin: 0;
+        padding-bottom: 30px;
+    }
 
-         span {
-            margin-right: 30px;
-         }
-         p {
-            margin-bottom: 10px;
-         }
+    /*第一屏幕*/
+    .one{
+        background-image: url("https://pro-kg-oss.oss-cn-beijing.aliyuncs.com/author/inlet/1.1@3x.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+    .one  .btn{
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 192px;
+        height: 58px;
+        /**/
+        -webkit-border-radius: 29px;
+        -moz-border-radius: 29px;
+        border-radius: 29px;
+        margin-left: 30px;
+        line-height: 60px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        text-align: center;
+        font-size: 20px;
+    }
+    .one  .register{
+        background: none;
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+        font-size:24px;
+        font-family:MicrosoftYaHei;
+    }
+    .one  .login{
+        background-color: #fff;
+        color: #2382EA;
+        font-size:24px;
+        font-family:MicrosoftYaHei;
+    }
+    .one  .btnwrap{
+        padding-top: 112px;
+        margin-left: 300px;
+    }
+    .one .only-logo{
+        z-index: 6;
+        height: 43px;
+        width: 166px;
+        position: absolute;
+        left: 99px;
+        top: 38px;
+        display: none; 
+    }
+    .one .valus1{
+        display: block;
+        width: 350px;
+        height: auto;
+        margin-left: 300px;
+    }
+    .one .valus2{
+        display: block;
+        width: 350px;
+        height: auto;
+        margin-left: 504px;
+        margin-top: 42px;
+    }
     </style>
 </head>
 <body>
-	<div class="container">
-		<h2>简历</h2>
-		<div class="resume-box">
-			<div class="resume-info clearfix">
-				<h3>基本信息</h3>
-				<div class="resume-item">
-					<strong>姓名</strong><span>郭康勋</span>
-					<strong>性别</strong><span>男</span>
-					<strong>应聘职位</strong><span>web前端工程师</span>
-				</div>
-			</div>
-			
-			<div class="resume-concact clearfix">
-				<h3>联系方式</h3>
-				<div class="resume-item">
-					<strong>手机</strong><span>13631407021</span>
-					<strong>Email</strong><a href="#"> guokangxun@163.com</a>
-					<strong>个人主页</strong><a href="https://github.com/kawhiGuo">Github</a>
-				</div>
-			</div>
-			
-			<div class="resume-ability clearfix">
-				<h3>能力描述</h3>
-				<div class="resume-item">
-					<h4>技术能力</h4>
-					<p>熟练掌握HTML,CSS,JavaScript,Sass,Jquery,webpack</p>
-					<h4>综合能力</h4>
-					<p>主动积极，努力勤奋</p>
-				</div>
-			</div>
+<!--箭头给相应的锚点就可以了-->
+<div id="fullpage">
+    <div class="header fixed">
+        <img src="1.png"  class="logo_left">
+        <div class="btn-wrapper">
+            <div class="btn register">注册</div>
+            <div class="btn login" >登录</div>
+        </div>
+    </div>
+    <!--第1屏-->
+    <div class="section re one">
+        <div>
+            <img src="1.png"  class="only-logo">
+            <img class="valus1"  src="2.png" alt="">
+            <img class="valus2"  src="3.png" alt="">
+            <div class="btnwrap">
+                <div class="btn register">注册</div>
+                <div class="btn login">登录</div>
+            </div>
+        </div>
+        <i class="&#xe605;" style="width: 30px;height: 28px;position: absolute;bottom: 30px;left: 50%"></i>
+        <a href="#page2" class="animate-bounce-down">
+            <img src="4.png" alt="" style="width: 100%;display: block">
+        </a>
+    </div>
+    <!--第2屏-->
+    <div class="section re two"  >
+        <div class="two-text" >
+            <p class="p1">多元内容自由创作</p>
+            <p class="p2">文章、视频、音频</p>
+            <p class="p2">自由实现多种形式展示你的思想火花</p>
+        </div>
+        <div class="two-img"></div>
+        <a href="#page3" class="animate-bounce-down">
+            <img src="5.png" alt="" style="width: 100%;display: block">
+        </a>
+    </div>
+    <!--第3屏-->
+    <div class="section re three" >
+        <div class="  three-img"></div>
+        <div class="  three-text " >
+            <p class="p1">真正的个性化内容定义
 
-			<div class="resume-education clearfix">
-				<h3>教育经历</h3>
-				<div class="resume-item">
-					<h4>本科</h4>
-					<p>广东药科大学</p>
-				</div>
-			</div>
+            </p>
 
-			<div class="resume-project clearfix">
-				<h3>项目经历</h3>
-				<div class="resume-item">
-					<h4>聚电运营管理后台</h4>
-					<p>作为前端工程师角色参与页面开发</p>
-					<h4>充电桩微信公众号页面</h4>
-					<p>参与微信公众号html5页面编写</p>
-				</div>
-			</div>
-		</div>			
-	</div>	
+            <p class="p2">给自己的文章加上关键词标签</p>
+            <p class="p2">读者群体你来决定
+
+            </p>
+        </div>
+        <a href="#page4" class="animate-bounce-down">
+            <img src="6.png" alt="" style="width: 100%;display: block">
+        </a>
+    </div>
+    <!--第4屏-->
+    <div class="section re four" >
+        <div class="four-text" >
+            <p class="p1">收益统计</p>
+            <p class="p1">让你对自己的创作成果一目了然
+            </p>
+            <p class="p2">好内容，当然要有好收益
+            </p>
+            <p class="p2">优质原创内容收益实时统计
+            </p>
+        </div>
+        <div class="four-img"></div>
+        <a href="#page5" class="animate-bounce-down">
+            <img src="7.png" alt="" style="width: 100%;display: block">
+        </a>
+    </div>
+    <!--第5屏-->
+    <div class="section re five" >
+        <div class="  five-img"></div>
+        <div class="  five-text " >
+            <p class="p1">动态粉丝数据</p>
+            <p class="p1">让你与你的粉丝更贴近</p>
+            <p class="p2">粉丝数据实时更新</p>
+            <p class="p2">每日增长数据看得见，告别数据等待</p>
+        </div>
+        <a href="#page6" class="animate-bounce-down">
+            <img src="8.png" alt="" style="width: 100%;display: block">
+        </a>
+    </div>
+    <!--第6屏-->
+    <div class="section re six" id="mysix" >
+        <img src="9.png"  class="only-logo">
+        <div class="text">
+            <div class="boss">
+                <p class="text-p ">在这里，人人都能是好作者</p>
+                <p class="text-p ">现在就开始吧</p>
+                <p  class="text-p-last ">成为作者其实很简单，只需提供基本资料，便可开通专栏</p>
+            </div>
+            <div class="btn-wrapper">
+                <div class="btn register">注册</div>
+                <div class="btn login">登录</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $('#fullpage').fullpage({
+            navigation           :true,                            //圆点导航
+            navigationPosition   :'left',                        //圆点导航位置left or right
+//            navigationTooltips   :['第一屏','第二屏','第三屏'],    //圆点导航提示信息
+            showActiveTooltip    :true,                            //圆点导航提示信息是否显示
+            anchors              :['page1','page2','page3','page4','page5','page6'],    //设置锚点
+            menu                 :'.header',                        //导航  menu：绑定菜单，设定相关属性与anchors的值相对应后，菜单可以控制滚动，默认为false；
+            verticalCentered     :false,                        //设置元素是否垂直居中
+            scrollingSpeed       :1000,                            //设置切屏速度
+//            滚动到某一屏后的回调函数
+            afterLoad:function (p1,index) {
+                if(index==1||index==6){
+                    $('.header').css('display','block')
+                    $('.header').removeClass('show-header')
+                }else{
+                    $('.header').css('display','block')
+                    $('.header').addClass('show-header')
+                }
+                /* if(index==1){
+                 $('.one .valus1').addClass('animated bounceInLeft')
+                 $('.one .valus2').addClass('animated bounceInRight')
+                 }*/
+            },
+//            页面结构生成后的回调函数，或者说页面初始化完成后的回调函数
+            afterRender:function () {
+                $('.header').css('display','none')
+                $('.one .valus1').addClass('animated slideInLeft')
+                $('.one .valus2').addClass('animated slideInLeft')
+            },
+            onLeave:function (index,nextIndex,direction) {
+                if(index==1&&nextIndex==2){
+                    $('.one .valus1').removeClass('animated slideInLeft')
+                    $('.one .valus2').removeClass('animated slideInLeft')
+                    $('.two .two-img').addClass('animated slideInDown')
+                    $('.two .two-text').addClass('animated slideInUp')
+                }
+                if(index==2&&nextIndex==3){
+                    $('.two .two-img').removeClass('animated slideInDown')
+                    $('.two .two-text').removeClass('animated slideInUp')
+                    $('.three .three-img').addClass('animated slideInDown')
+                    $('.three .three-text').addClass('animated slideInUp')
+                }
+                if(index==3&&nextIndex==4){
+                    $('.four .four-img').addClass('animated slideInDown')
+                    $('.four .four-text').addClass('animated slideInUp')
+                    $('.three .three-img').removeClass('animated slideInDown')
+                    $('.three .three-text').removeClass('animated slideInUp')
+                }
+                if(index==4&&nextIndex==5){
+                    $('.five .five-img').addClass('animated slideInDown')
+                    $('.five .five-text').addClass('animated slideInUp')
+                    $('.four .four-img').removeClass('animated slideInDown')
+                    $('.four .four-text').removeClass('animated slideInUp')
+                }
+                if(index==5&&nextIndex==6){
+                    $('.six .boss').addClass('animated  slideInDown')
+                    $('.five .five-img').removeClass('animated slideInDown')
+                    $('.five .five-text').removeClass('animated slideInUp')
+                }
+                if(index==6&&nextIndex==5){
+                    $('.six .boss').removeClass('animated  slideInDown')
+                    $('.five .five-img').addClass('animated slideInDown')
+                    $('.five .five-text').addClass('animated slideInUp')
+                }
+                if(index==5&&nextIndex==4){
+                    $('.five .five-img').removeClass('animated slideInDown')
+                    $('.five .five-text').removeClass('animated slideInUp')
+                    $('.four .four-img').addClass('animated slideInDown')
+                    $('.four .four-text').addClass('animated slideInUp')
+                }
+                if(index==4&&nextIndex==3){
+                    $('.four .four-img').removeClass('animated slideInDown')
+                    $('.four .four-text').removeClass('animated slideInUp')
+                    $('.three .three-img').addClass('animated slideInDown')
+                    $('.three .three-text').addClass('animated slideInUp')
+                }
+                if(index==3&&nextIndex==2){
+                    $('.two .two-img').addClass('animated slideInDown')
+                    $('.two .two-text').addClass('animated slideInUp')
+                    $('.three .three-img').removeClass('animated slideInDown')
+                    $('.three .three-text').removeClass('animated slideInUp')
+                }
+                if(index==2&&nextIndex==1){
+                    $('.one .valus1').addClass('animated slideInLeft')
+                    $('.one .valus2').addClass('animated slideInLeft')
+                    $('.two .two-img').removeClass('animated slideInDown')
+                    $('.two .two-text').removeClass('animated slideInUp')
+                }
+
+            }
+        });
+    });
+    $(".login").click(function(){
+        window.location.href ='./login';
+    });
+    $(".register").click(function(){
+        window.location.href ='./register';
+    });
+</script>
 </body>
 </html>
