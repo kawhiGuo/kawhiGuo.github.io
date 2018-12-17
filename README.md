@@ -9,13 +9,13 @@ Welcome to https://github.com/kawhiGuo/kawhiGuo.github.io!
 1、git checkout -b test //新建分支  
 2、git checkout master //切换到master分支  
 3、git meger master //把master分支的代码merge到test分支   
-4git stash //把未完成的修改缓存到栈容器中  
+4、git stash //把未完成的修改缓存到栈容器中  
 
-## 2018.12.14
--browser-sync热更新
+## 2018.12.14  
+[browser-sync浏览器手机同步的测试工具](http://www.browsersync.cn/) 
 
-
-```browser-sync start --server --files "**"
+```
+browser-sync start --server --files "**" 
 ```
 
 ## 2018.12.15
