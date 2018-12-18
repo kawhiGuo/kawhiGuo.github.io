@@ -1,11 +1,15 @@
 Welcome to https://github.com/kawhiGuo/kawhiGuo.github.io!
 
-# 每天学习一遍新技术
+# 每天学习一篇新技术或巩固知识，为进阶高级前端做准备
+## 2018.12.11
+[前端必备的切图技巧](https://www.cnblogs.com/kevoin/p/10091392.html)
+
 ## 2018.12.12 
 [markdown语法](https://blog.csdn.net/qq_31796651/article/details/80803599)
+[call,apply,bind三者异同](https://www.cnblogs.com/kevoin/p/4908064.html)
 
 ## 2018.12.13
-[git常用命令的学习](https://www.cnblogs.com/allanli/p/git_commands.html)  
+[git常用命令的学习](https://www.cnblogs.com/kevoin/p/10138717.html)  
 1、git checkout -b test //新建分支  
 2、git checkout master //切换到master分支  
 3、git meger master //把master分支的代码merge到test分支   
@@ -13,6 +17,8 @@ Welcome to https://github.com/kawhiGuo/kawhiGuo.github.io!
 
 ## 2018.12.14  
 [browser-sync浏览器手机同步的测试工具](http://www.browsersync.cn/) 
+
+**代码块:在键盘上的esc键下的那个键**
 
 ```
 browser-sync start --server --files "**" 
@@ -33,3 +39,61 @@ browser-sync start --server --files "**"
 [前端算法模块化的写法](https://blog.csdn.net/weixin_38984353/article/details/80393412)
 
 [事件委托的原理和实例说明](https://www.cnblogs.com/liugang-vip/p/5616484.html)
+
+## TODO计划
+- 【进阶1期】 调用堆栈
+
+- 【进阶2期】 作用域闭包
+
+- 【进阶3期】 this全面解析
+
+- 【进阶4期】 深浅拷贝原理
+
+- 【进阶5期】 原型Prototype
+
+- 【进阶6期】 高阶函数
+
+- 【进阶7期】 事件机制
+
+- 【进阶8期】 Event Loop原理
+- 
+- 【进阶9期】 Promise原理
+- 
+- 【进阶10期】Async/Await原理
+
+- 【进阶11期】防抖/节流原理
+
+- 【进阶12期】模块化详解
+- 
+- 【进阶13期】ES6重难点
+
+- 【进阶14期】计算机网络概述
+
+- 【进阶15期】浏览器渲染原理
+
+- 【进阶16期】webpack配置
+
+- 【进阶17期】webpack原理
+
+- 【进阶18期】前端监控
+
+- 【进阶19期】跨域和安全
+
+- 【进阶20期】性能优化
+
+- 【进阶21期】VirtualDom原理
+
+- 【进阶22期】Diff算法
+
+- 【进阶23期】MVVM双向绑定
+
+- 【进阶24期】Vuex原理
+
+- 【进阶25期】Redux原理
+
+- 【进阶26期】路由原理
+
+- 【进阶27期】VueRouter源码解析
+
+- 【进阶28期】ReactRouter源码解析
+
