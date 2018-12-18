@@ -29,3 +29,5 @@ browser-sync start --server --files "**"
 
 ## 2018.12.18
 [前端常见的js算法](https://mp.weixin.qq.com/s?__biz=MzI5MjUxNjA4Mw==&mid=2247484230&idx=1&sn=af0323bad6c3778adef3ec6c0624eb45&chksm=ec017adadb76f3cca6c5dcd45331438eb4e1ec69bd67d80787746bc2705fc6686b567b628341&mpshare=1&scene=24&srcid=1022085nin3V38eHjCQdhmTn&key=53619376bbd6f10fd7529e6f1f352422ee480960ba0fe058e30750bbefa896dee76eb2cdd1662dd92252bebde2575de07f19b4c1596403c8ee9a3bdbf9c96b7ed2ad42deade962ba2012f4f5571027f0&ascene=0&uin=MjEyODUyMzE4MQ%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.3+build(16D30)&version=12020810&nettype=WIFI&lang=en&fontScale=100&pass_ticket=nrqLTHOhJKrrP31%2Bx48FcIzMrJDUQBCHoz9AOmOIwhs3WuTA6NhH7iBTDwRIQ6UT)
+
+[事件委托的原理和实例说明](https://www.cnblogs.com/liugang-vip/p/5616484.html)
