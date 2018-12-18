@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登录注册</title>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <meta name="render" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>fullpage结合animatecss的动画页面</title>
+    <meta name="keyword" content="fullpage,animatecss,动画，全屏滚动
+    ">
+    <meta name="description" content="这是一个学习fullpage的网站">
+
+    
     <link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css">
     <style>
@@ -469,7 +474,7 @@
 <!--箭头给相应的锚点就可以了-->
 <div id="fullpage">
     <div class="header fixed">
-        <img src="1.png"  class="logo_left">
+        <!-- <img src="1.png"  class="logo_left"> -->
         <div class="btn-wrapper">
             <div class="btn register">注册</div>
             <div class="btn login" >登录</div>
@@ -478,18 +483,18 @@
     <!--第1屏-->
     <div class="section re one">
         <div>
-            <img src="1.png"  class="only-logo">
+            <!-- <img src="1.png"  class="only-logo">
             <img class="valus1"  src="2.png" alt="">
-            <img class="valus2"  src="3.png" alt="">
+            <img class="valus2"  src="3.png" alt=""> -->
             <div class="btnwrap">
                 <div class="btn register">注册</div>
                 <div class="btn login">登录</div>
             </div>
         </div>
         <i class="&#xe605;" style="width: 30px;height: 28px;position: absolute;bottom: 30px;left: 50%"></i>
-        <a href="#page2" class="animate-bounce-down">
+        <!-- <a href="#page2" class="animate-bounce-down">
             <img src="4.png" alt="" style="width: 100%;display: block">
-        </a>
+        </a> -->
     </div>
     <!--第2屏-->
     <div class="section re two"  >
@@ -499,9 +504,9 @@
             <p class="p2">自由实现多种形式展示你的思想火花</p>
         </div>
         <div class="two-img"></div>
-        <a href="#page3" class="animate-bounce-down">
+        <!-- <a href="#page3" class="animate-bounce-down">
             <img src="5.png" alt="" style="width: 100%;display: block">
-        </a>
+        </a> -->
     </div>
     <!--第3屏-->
     <div class="section re three" >
@@ -516,9 +521,9 @@
 
             </p>
         </div>
-        <a href="#page4" class="animate-bounce-down">
+        <!-- <a href="#page4" class="animate-bounce-down">
             <img src="6.png" alt="" style="width: 100%;display: block">
-        </a>
+        </a> -->
     </div>
     <!--第4屏-->
     <div class="section re four" >
@@ -532,9 +537,9 @@
             </p>
         </div>
         <div class="four-img"></div>
-        <a href="#page5" class="animate-bounce-down">
+        <!-- <a href="#page5" class="animate-bounce-down">
             <img src="7.png" alt="" style="width: 100%;display: block">
-        </a>
+        </a> -->
     </div>
     <!--第5屏-->
     <div class="section re five" >
@@ -545,13 +550,13 @@
             <p class="p2">粉丝数据实时更新</p>
             <p class="p2">每日增长数据看得见，告别数据等待</p>
         </div>
-        <a href="#page6" class="animate-bounce-down">
+        <!-- <a href="#page6" class="animate-bounce-down">
             <img src="8.png" alt="" style="width: 100%;display: block">
-        </a>
+        </a> -->
     </div>
     <!--第6屏-->
     <div class="section re six" id="mysix" >
-        <img src="9.png"  class="only-logo">
+        <!-- <img src="9.png"  class="only-logo"> -->
         <div class="text">
             <div class="boss">
                 <p class="text-p ">在这里，人人都能是好作者</p>
@@ -565,18 +570,20 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
 <script>
     $(function(){
         $('#fullpage').fullpage({
-            navigation           :true,                            //圆点导航
-            navigationPosition   :'left',                        //圆点导航位置left or right
-//            navigationTooltips   :['第一屏','第二屏','第三屏'],    //圆点导航提示信息
+            navigation           :true,   //圆点导航
+            navigationPosition   :'left', //圆点导航位置left or right
+            // navigationTooltips:['第一屏','第二屏','第三屏'],    //圆点导航提示信息
             showActiveTooltip    :true,                            //圆点导航提示信息是否显示
             anchors              :['page1','page2','page3','page4','page5','page6'],    //设置锚点
             menu                 :'.header',                        //导航  menu：绑定菜单，设定相关属性与anchors的值相对应后，菜单可以控制滚动，默认为false；
-            verticalCentered     :false,                        //设置元素是否垂直居中
-            scrollingSpeed       :1000,                            //设置切屏速度
-//            滚动到某一屏后的回调函数
+            verticalCentered     :false,   //设置元素是否垂直居中
+            scrollingSpeed       :1000,    //设置切屏速度
+            //滚动到某一屏后的回调函数
             afterLoad:function (p1,index) {
                 if(index==1||index==6){
                     $('.header').css('display','block')
@@ -590,7 +597,7 @@
                  $('.one .valus2').addClass('animated bounceInRight')
                  }*/
             },
-//            页面结构生成后的回调函数，或者说页面初始化完成后的回调函数
+            //页面结构生成后的回调函数，或者说页面初始化完成后的回调函数
             afterRender:function () {
                 $('.header').css('display','none')
                 $('.one .valus1').addClass('animated slideInLeft')
@@ -659,12 +666,12 @@
             }
         });
     });
-    $(".login").click(function(){
-        window.location.href ='./login';
-    });
-    $(".register").click(function(){
-        window.location.href ='./register';
-    });
+    // $(".login").click(function(){
+    //     window.location.href ='./login';
+    // });
+    // $(".register").click(function(){
+    //     window.location.href ='./register';
+    // });
 </script>
 </body>
 </html>
