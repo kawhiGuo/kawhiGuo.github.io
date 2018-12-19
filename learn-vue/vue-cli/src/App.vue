@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-      
+      <input type="" name="">
+      <button>确定</button>
   </div>
 </template>
 

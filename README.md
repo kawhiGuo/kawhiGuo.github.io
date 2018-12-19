@@ -44,7 +44,8 @@ browser-sync start --server --files "**"
 
 [render: h => h(App) $mount 什么意思](https://segmentfault.com/a/1190000014254740)  
 
-
+[2018的前端技术清单](https://juejin.im/post/5bdfb387e51d452c8e0aa902)
+  
 ## TODO计划
 - 【进阶1期】 调用堆栈
 
