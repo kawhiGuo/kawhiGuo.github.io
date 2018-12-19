@@ -40,6 +40,11 @@ browser-sync start --server --files "**"
 
 [事件委托的原理和实例说明](https://www.cnblogs.com/liugang-vip/p/5616484.html)
 
+## 2018.12.19
+
+[render: h => h(App) $mount 什么意思](https://segmentfault.com/a/1190000014254740)  
+
+
 ## TODO计划
 - 【进阶1期】 调用堆栈
 
