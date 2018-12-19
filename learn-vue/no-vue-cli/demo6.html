@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue的v-if，v-show,v-for</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<div v-if="show">v-if控制元素显示和删除</div>
+		<div v-show="hide">v-show控制元素的显示隐藏</div>
+		<button @click="clickButton">toggle</button>
+		<ul>
+			<li v-for="(item,index) of list" :key="index">遍历显示{{item}}</li>
+		</ul>
+	</div>
+
+
+	<p>总结：</p>
+	<ul>
+		<li>v-if控制元素显示和删除(true显示false删除)</li>
+		<li>v-show控制元素的显示隐藏(true显示false隐藏)</li>
+		<li>v-for控制元素的遍历显示，注意使用:key属性来提升性能，而且key的值不能相同</li>
+	</ul>
+
+	<script>
+		new Vue({
+			el: "#root",
+			data: {
+				show: true,
+				hide: false,
+				list: [1,2,3]
+			},
+			methods:{
+				clickButton: function(){
+					this.show= !this.show;
+				}
+			}
+
+		})
+	</script>
+</body>
+</html>

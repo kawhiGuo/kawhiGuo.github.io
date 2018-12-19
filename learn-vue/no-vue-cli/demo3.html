@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue实例的数据，事件和方法</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<div v-html="msg" @click="handleClick"></div>
+	</div>
+
+	<p>总结：</p>
+	<ul>
+		<li>1数据绑定可以用双花括号，v-text，v-html(会转义一次) </li>
+		<li>2事件绑定 v-on:可以简写为@click</li>
+		<li>3方法写在实例的methods里面</li>
+	</ul>
+
+	<script>
+		new Vue({
+			el: "#root",
+			data: {
+				msg:"<h1>hello world</h1>"
+			},
+			methods: {
+				handleClick: function(){
+					this.msg="hello";
+				}
+			}
+
+		})
+	</script>
+</body>
+</html>

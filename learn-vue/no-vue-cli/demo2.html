@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>挂载点，模版，实例</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="root"></div>
+	<p>总结</p>
+	<ul>
+		<li>挂载点 el (表示让vue实例接管id为root的元素),也称为vue实例的挂载点</li>
+		<li>模版（挂载点里面内容），有二种编写方式.一种是直接写在挂载点里面;一种是写在实例的template里面</li>
+	</ul>
+	<script>
+		new Vue({
+			el: "#root",
+			template: '<div>{{msg}}</div>',
+			data: {
+				msg:"hello world"
+			}
+		})
+	</script>
+</body>
+</html>

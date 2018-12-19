@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue的计算属性和监听器</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		姓：<input type="text" v-model="firstName">
+		名：<input type="text" v-model="lastName">
+		<div>姓名：{{fullName}}</div>
+		<div>变化的次数：{{count}}</div>
+	</div>
+
+
+	<p>总结：</p>
+	<ul>
+		<li>计算属性computed是一个对象,好处是firstname和lastname没有改变，会使用缓存值</li>
+		<li>监听器watch,监听某一个数据的变化。数据发生改变，执行相应的逻辑</li>
+	</ul>
+
+	<script>
+		new Vue({
+			el: "#root",
+			data: {
+				firstName:'',
+				lastName:'',
+				count: 0
+			},
+			computed: {
+				fullName: function(){
+					return this.firstName+"" +this.lastName
+				}
+			},
+			watch: {
+				fullName: function(){
+					this.count++;
+				}
+			}
+
+		})
+	</script>
+</body>
+</html>

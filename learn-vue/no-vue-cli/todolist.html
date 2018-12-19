@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TODOLIST</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<div>
+			<input type="text" v-model="inputValue">
+			<button @click="handleSubmit" >提交</button>
+		</div>
+		<ul>
+			<li v-for="(item,index) of list" :key="index">{{item}}</li>
+		</ul>
+	</div>
+	<script>
+		new Vue({
+			el: "#root",
+			data: {
+				inputValue: '',
+				list: []
+			},
+			methods: {
+				handleSubmit: function(){
+					this.list.push(this.inputValue);
+					this.inputValue=''
+				}
+			}
+		})
+	</script>
+</body>
+</html>
