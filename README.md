@@ -5,7 +5,8 @@ Welcome to https://github.com/kawhiGuo/kawhiGuo.github.io!
 [前端必备的切图技巧](https://www.cnblogs.com/kevoin/p/10091392.html)
 
 ## 2018.12.12 
-[markdown语法](https://blog.csdn.net/qq_31796651/article/details/80803599)
+[markdown语法](https://blog.csdn.net/qq_31796651/article/details/80803599)  
+
 [call,apply,bind三者异同](https://www.cnblogs.com/kevoin/p/4908064.html)
 
 ## 2018.12.13
@@ -46,7 +47,11 @@ browser-sync start --server --files "**"
 
 [2018的前端技术清单](https://juejin.im/post/5bdfb387e51d452c8e0aa902)
 
-[charles抓包使用教程](https://www.jianshu.com/p/f82bc50248a0)  
+[charles抓包使用教程](https://www.jianshu.com/p/f82bc50248a0)
+
+## 2018.12.20 
+[前端基础进阶系列](https://www.jianshu.com/p/cd3fee40ef59)  
+  
 ## TODO计划
 - 【进阶1期】 调用堆栈
 
