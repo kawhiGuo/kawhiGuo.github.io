@@ -7,8 +7,6 @@ Welcome to https://github.com/kawhiGuo/kawhiGuo.github.io!
 ## 2018.12.12 
 [markdown语法](https://blog.csdn.net/qq_31796651/article/details/80803599)  
 
-[call,apply,bind三者异同](https://www.cnblogs.com/kevoin/p/4908064.html)
-
 ## 2018.12.13
 [git常用命令的学习](https://www.cnblogs.com/kevoin/p/10138717.html)  
 1、git checkout -b test //新建分支  
@@ -51,7 +49,16 @@ browser-sync start --server --files "**"
 
 ## 2018.12.20 
 [前端基础进阶系列](https://www.jianshu.com/p/cd3fee40ef59)  
-  
+
+## 2018.12.21 
+[http1.0和http1.1及http2.0区别](https://www.haorooms.com/post/long_lianjie_websocket) 
+
+## 2018.12.22 
+[call,apply,bind三者异同](https://www.cnblogs.com/kevoin/p/4908064.html)
+
+## 2018.12.23 
+[性能优化和模块化](https://www.cnblogs.com/kevoin/p/5643492.html)
+
 ## TODO计划
 - 【进阶1期】 调用堆栈
 
