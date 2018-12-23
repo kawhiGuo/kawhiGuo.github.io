@@ -59,6 +59,9 @@ browser-sync start --server --files "**"
 ## 2018.12.23 
 [性能优化和模块化](https://www.cnblogs.com/kevoin/p/5643492.html)
 
+## 2018.12.24
+[todolist结合vue和element-ui框架](https://kawhiguo.github.io/learn-vue/no-vue-cli/vueElementDemo.html)
+
 ## TODO计划
 - 【进阶1期】 调用堆栈
 
