@@ -62,6 +62,16 @@ browser-sync start --server --files "**"
 ## 2018.12.24
 [todolist结合vue和element-ui框架](https://kawhiguo.github.io/learn-vue/no-vue-cli/vueElementDemo.html)
 
+## 2018.12.25
+[es6语法实现单链表结构](https://www.imooc.com/article/40742)
+
+## 2018.12.26
+[es6语法实现双链表结构](https://www.imooc.com/article/41386)
+
+## 2018.12.27
+[大公司里怎样开发和部署前端代码？](https://github.com/fouber/blog/issues/6)
+
+
 ## TODO计划
 - 【进阶1期】 调用堆栈
 
