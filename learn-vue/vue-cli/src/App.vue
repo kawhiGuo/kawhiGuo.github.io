@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-      <input type="" name="">
-      <button>确定</button>
+      <h1 :style="{transform: red}">{{ msg | capitalize}}</h1>
+      <ul>
+        <li v-for="(item,index) of teacher" :key="index">{{item.name}}</li>
+      </ul>
+      <h2 @click="count += 1"> {{ count }}</h2>
   </div>
 </template>
 
@@ -12,10 +15,18 @@ export default {
   name: 'app',
   components: {
     HelloWorld
-  }
+  },
   data () {
     return {
-
+      msg: 'df',
+      class1: true,
+      seen: true,
+      teacher: [
+        {name:1},
+        {name:3},
+        {name:2}
+      ],
+      count: 5
     }
   }
 }

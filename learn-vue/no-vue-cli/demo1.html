@@ -6,13 +6,35 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 </head>
 <body>
-	<div id="root">{{msg}}</div>
+	<div id="root">
+		<input type="text" v-model="name">
+		<ul>
+			<li v-for="cat in cats">{{ cat.name }}</li>
+		</ul>
+	</div>
 	<script>
+		function sortby(obj,obj2){
+			return obj.age - obj2.age;
+		}
 		// vue创建一个实例
-		new Vue({
+		const app = new Vue({
 			el: "#root",
 			data: {
-				msg:"Hello World!"
+				name:"Hello World!",
+				cats: [
+				{
+					name: 'simba',
+					age: 11
+				},
+				{
+					name: 'robin', 
+					age: 5
+				},
+				{
+					name: 'pig',
+					age: 3
+				}
+				].sort(sortby)
 			}
 		})
 	</script>
