@@ -78,13 +78,22 @@ browser-sync start --server --files "**"
 [事件委托的原理和实例说明](https://www.cnblogs.com/liugang-vip/p/5616484.html)
 
 ## 2018.12.31
-- 年终总结：坚持，自律，vue，小程序。
+年终总结：坚持，自律，vue，小程序。
 
 ## 2019.01.01
 VS Code 语法高亮（找到左侧导航栏最下面的扩展功能，输入Vetur下载）
 
-## 2018.02.18
-- 新的一年挑战计划：typescript3.0，react，混合app，当我自律，人生无敌。
+
+## 2019.02.18
+新的一年挑战计划：typescript3.0，react，混合app，当我自律，人生无敌。
+
+## 2019.02.19
+[新年后面试五家公司的总结](https://www.cnblogs.com/kevoin/p/10405874.html)
+
+## 2019.02.20
+阅读typescript阮一峰入门教程
+写一个汇率的小组件
+把文章改成gitbook的格式
 
 ## TODO计划
 - 【进阶1期】 调用堆栈
