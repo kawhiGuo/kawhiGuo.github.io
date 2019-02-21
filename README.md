@@ -95,6 +95,9 @@ VS Code 语法高亮（找到左侧导航栏最下面的扩展功能，输入Vet
 写一个汇率的小组件
 把文章改成gitbook的格式
 
+## 2019.02.21
+[两种常见的登录状态记录方式](https://blog.csdn.net/xu_jl1997/article/details/84105215)
+
 ## TODO计划
 - 【进阶1期】 调用堆栈
 
