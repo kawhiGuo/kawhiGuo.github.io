@@ -98,6 +98,9 @@ VS Code 语法高亮（找到左侧导航栏最下面的扩展功能，输入Vet
 ## 2019.02.21
 [两种常见的登录状态记录方式](https://blog.csdn.net/xu_jl1997/article/details/84105215)
 
+## 2019.02.22
+[浅析 NodeJs 的几种文件路径 ](https://github.com/imsobear/blog/issues/48)
+
 ## TODO计划
 - 【进阶1期】 调用堆栈
 
