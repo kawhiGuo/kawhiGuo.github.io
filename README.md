@@ -103,8 +103,7 @@ VS Code 语法高亮（找到左侧导航栏最下面的扩展功能，输入Vet
  坚持练了keep，晚上看了diff算法，和vue，react使用key的用途
 
 ## 2019.02.24
- 看了2019年前端发展的规划和技术更新点，推荐这篇文章
-[为什么说GraphQL可以取代REST API？](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247490309&idx=1&sn=ae433cdd36ed969894e20304c0dd5556&chksm=f951ae46ce2627504af87988d0d2d02741d6bbe17afeb0fcfc5471844b0b0e30ea410647aaeb&mpshare=1&scene=24&srcid=01209HAZ7ZmmPKmaCpA8TMTs&key=1f9ccc8bb3f10f201d06abef82371a1abe0954a3127cc6acfc3dd7602c32433c475956b6b238397e868cee43e1710653c30142c1944e80eaad6741830a91ee685b282a708b5fca7f99481d4b5d46a046&ascene=0&uin=MjEyODUyMzE4MQ%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.3+build(16D30)
+[ 为什么说GraphQL可以取代REST API？]https://www.infoq.cn/article/LVQGuC3vQX-T3PpVCkHt)
 
 ## 2019.02.25
 今天重温了js高程，看了下面的文章，对基本类型和引用类型的复制，理解更深了一点。
