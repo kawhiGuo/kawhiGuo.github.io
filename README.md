@@ -104,14 +104,26 @@ VS Code 语法高亮（找到左侧导航栏最下面的扩展功能，输入Vet
 
 ## 2019.02.24
  看了2019年前端发展的规划和技术更新点，推荐这篇文章
-为什么说GraphQL可以取代REST API？](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247490309&idx=1&sn=ae433cdd36ed969894e20304c0dd5556&chksm=f951ae46ce2627504af87988d0d2d02741d6bbe17afeb0fcfc5471844b0b0e30ea410647aaeb&mpshare=1&scene=24&srcid=01209HAZ7ZmmPKmaCpA8TMTs&key=1f9ccc8bb3f10f201d06abef82371a1abe0954a3127cc6acfc3dd7602c32433c475956b6b238397e868cee43e1710653c30142c1944e80eaad6741830a91ee685b282a708b5fca7f99481d4b5d46a046&ascene=0&uin=MjEyODUyMzE4MQ%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.3+build(16D30)&version=12020810&nettype=WIFI&lang=en&fontScale=100&pass_ticket=8CLBgqcSLI%2BJrrYV36sln4wqw8qggJeP9RcZo7u660NMTk6T3fSAU%2FUcMRzI8mpH)
+[为什么说GraphQL可以取代REST API？](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247490309&idx=1&sn=ae433cdd36ed969894e20304c0dd5556&chksm=f951ae46ce2627504af87988d0d2d02741d6bbe17afeb0fcfc5471844b0b0e30ea410647aaeb&mpshare=1&scene=24&srcid=01209HAZ7ZmmPKmaCpA8TMTs&key=1f9ccc8bb3f10f201d06abef82371a1abe0954a3127cc6acfc3dd7602c32433c475956b6b238397e868cee43e1710653c30142c1944e80eaad6741830a91ee685b282a708b5fca7f99481d4b5d46a046&ascene=0&uin=MjEyODUyMzE4MQ%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.3+build(16D30)
 
 ## 2019.02.25
+今天重温了js高程，看了下面的文章，对基本类型和引用类型的复制，理解更深了一点。
 [调用堆栈 ](https://www.jianshu.com/p/996671d4dcc4)
 
 ## 2019.02.26
-[作用域闭包](https://www.jianshu.com/p/996671d4dcc4)
+今天面试一个大数据公司，四面拿到了offer。
+笔试注重基础，原型，闭包，继承，this指向。
+项目面试问了vue全家桶的mvvm，生命周期，webpack的优化，跨域的原理
+人事面试问了职业规划和未来的发展
 
+## 2019.02.27
+今天抽空去面试一家上市公司，主要做游戏开发。
+没有笔试，去到过了人事面直接技术主管聊，自我介绍，项目介绍，模块化组件化工程化的搭建，vue全家桶，混合开发的优劣。
+
+总结：是一个新的团队，技术栈还没有确定方向，加班996.不太合适拒绝了
+
+## 2019.02.28
+今天去面试南方电网的子公司，期待有所收获。
 
 ## TODO计划
 - 【进阶1期】 调用堆栈
