@@ -8,7 +8,7 @@ Welcome to https://github.com/kawhiGuo/kawhiGuo.github.io!
 [markdown语法](https://blog.csdn.net/qq_31796651/article/details/80803599)  
 
 ## 2018.12.13
-[git常用命令的学习](https://www.cnblogs.com/kevoin/p/10138717.html)  
+[git命令实际运用](https://blog.csdn.net/shusheng0007/article/details/80791849)  
 1、git checkout -b test //新建分支  
 2、git checkout master //切换到master分支  
 3、git meger master //把master分支的代码merge到test分支   
@@ -92,14 +92,26 @@ VS Code 语法高亮（找到左侧导航栏最下面的扩展功能，输入Vet
 
 ## 2019.02.20
 阅读typescript阮一峰入门教程
-写一个汇率的小组件
-把文章改成gitbook的格式
 
 ## 2019.02.21
 [两种常见的登录状态记录方式](https://blog.csdn.net/xu_jl1997/article/details/84105215)
 
 ## 2019.02.22
 [浅析 NodeJs 的几种文件路径 ](https://github.com/imsobear/blog/issues/48)
+
+## 2019.02.23
+ 坚持练了keep，晚上看了diff算法，和vue，react使用key的用途
+
+## 2019.02.24
+ 看了2019年前端发展的规划和技术更新点，推荐这篇文章
+为什么说GraphQL可以取代REST API？](https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247490309&idx=1&sn=ae433cdd36ed969894e20304c0dd5556&chksm=f951ae46ce2627504af87988d0d2d02741d6bbe17afeb0fcfc5471844b0b0e30ea410647aaeb&mpshare=1&scene=24&srcid=01209HAZ7ZmmPKmaCpA8TMTs&key=1f9ccc8bb3f10f201d06abef82371a1abe0954a3127cc6acfc3dd7602c32433c475956b6b238397e868cee43e1710653c30142c1944e80eaad6741830a91ee685b282a708b5fca7f99481d4b5d46a046&ascene=0&uin=MjEyODUyMzE4MQ%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.3+build(16D30)&version=12020810&nettype=WIFI&lang=en&fontScale=100&pass_ticket=8CLBgqcSLI%2BJrrYV36sln4wqw8qggJeP9RcZo7u660NMTk6T3fSAU%2FUcMRzI8mpH)
+
+## 2019.02.25
+[调用堆栈 ](https://www.jianshu.com/p/996671d4dcc4)
+
+## 2019.02.26
+[作用域闭包](https://www.jianshu.com/p/996671d4dcc4)
+
 
 ## TODO计划
 - 【进阶1期】 调用堆栈
